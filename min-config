@@ -1,0 +1,19 @@
+;;; uncomment and point to your org directories
+;(add-to-list 'load-path "~/.elisp/org/lisp/")
+;(add-to-list 'load-path "~/.elisp/org/contrib/lisp")
+(require 'org)
+(require 'ox-beamer)
+
+;;; uncomment and install octave to test babel functionality
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((octave . t)))
+
+;;; this is still in my config, but commenting out generated the PDF just fine
+;;; with =C-c C-e l P=, so it's probably part of "the old way"
+;(add-to-list 'org-latex-classes
+;             '("beamer"
+;               "\\documentclass\[presentation\]\{beamer\}"
+;               ("\\section\{%s\}" . "\\section*\{%s\}")
+;              ("\\subsection\{%s\}" . "\\subsection*\{%s\}")
+;               ("\\subsubsection\{%s\}" . "\\subsubsection*\{%s\}")))
