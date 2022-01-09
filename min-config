@@ -5,9 +5,9 @@
 (require 'ox-beamer)
 
 ;;; uncomment and install octave to test babel functionality
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((octave . t)))
+;(org-babel-do-load-languages
+; 'org-babel-load-languages
+; '((octave . t)))
 
 ;;; this is still in my config, but commenting out generated the PDF just fine
 ;;; with =C-c C-e l P=, so it's probably part of "the old way"
